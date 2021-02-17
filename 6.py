@@ -9,9 +9,14 @@
 # 100,150,180
 # The output of the program should be:
 # 18,22,24
+from math import sqrt
 
 c=50
 h=30
-d=input("enter a coma seperated sequence:").split(',')
-q=[(2*c*int(i))/h for i in d]
-print(",".join(q))
+s=input("enter a coma seperated sequence:").split(',')
+d=[int(i) for i in s]
+q=[round(sqrt((2*c*i)/h)) for i in d]
+s=[str(i) for i in q]
+print(','.join(s))
+
+# print(",".join(str(q)))
